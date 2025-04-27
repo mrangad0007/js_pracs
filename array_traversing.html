@@ -3,24 +3,23 @@
 <head>
     <title>Array Traversing</title>
     <script>
-        let data = [9,45,2,8,45,23,7,78,0,11,41,77];
-        // for(let i=0;i<data.length;i++) {
-        //     document.write(`Array ${i} is ${data[i]} <br>`)
-        // }
-        // let x = 10;
-        // document.write(data[x])
-        function getElement() {
-            let el = document.getElementById('element').value
-            if(el<data.length && el>0 && typeof parseInt(el) === "number"){
-                alert(data[el])
-            } else {
-                alert("Please enter valid input")
+        let data = [60,30,10,67,40];
+        let newE1 = 70;
+        let position = 2;
+        console.warn(data)
+        for(let i= data.length - 1;i>=0;i--){
+            // console.warn(data[i])
+            if(i>=position){
+                data[i+1] = data[i]
+                if(i==position)
+                {
+                    data[i] = newE1   
+                }
             }
         }
+        console.warn(data)
     </script>
 </head>
 <body>
-    <input type="text" id="element" />
-    <button onclick="getElement()" >Get Element</button>
 </body>
 </html>
